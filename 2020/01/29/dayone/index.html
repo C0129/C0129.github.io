@@ -13,7 +13,32 @@
 <p>放两张帅气的照片（ps: 粑粑的技术太渣了,人家的帅气一点都看不出来了）</p>
 <p><img src="https://c0129.github.io/2020/01/29/dayone/IMG_0922_comp.jpg" alt="粑粑的拍照技术太渣了" title="粑粑的拍照技术太渣了"><br><a href="https://c0129.github.io/2020/01/29/dayone/IMG_0922.jpeg" title="粑粑的拍照技术太渣了">查看原图</a></p>
 <p><img src="https://c0129.github.io/2020/01/29/dayone/IMG_1501_comp.jpg" alt="不能把人家拍的清晰帅气吗，哼" title="不能把人家拍的清晰帅气吗，哼"><br><a href="https://c0129.github.io/2020/01/29/dayone/IMG_1501.jpeg" title="不能把人家拍的清晰帅气吗，哼">查看原图</a></p>
-</div></header><footer class="post__foot u-cf"><ul class="post__tag u-fl"><li class="post__tag__item"><a class="post__tag__link" href="/tags/0%EF%BD%9E30%E5%A4%A9/">0～30天</a></li></ul></footer></article></main><footer class="foot"><div class="foot-copy">&copy; 2020 CaoZhen</div></footer>
+<script>
+    function getInfo() {
+        var startTime = new Date("2020-01-29 19:40:00");
+        var endTime = new Date();
+        var time = endTime - startTime;
+        var day = Math.floor(time / 1000 / 3600 / 24);
+        var second = (time - day * 24 * 3600 * 1000) / 1000;
+        var hour =  Math.floor(second / 60 / 60);
+        var min = Math.floor((second - hour * 60 * 60) / 60);
+        var sec = Math.floor((second - hour * 60 * 60 - min * 60));
+        var s = `${day} 天 ${hour} 小时 ${min} 分钟 ${sec}秒`
+        document.getElementsByClassName("main")[0].getElementsByTagName("p")[0].innerHTML = `出生天数: <strong>${s}</strong>`;
+    }
+
+    var getRandomColor = function(){
+        return  '#' +
+        (function(color){
+        return (color +=  '0123456789abcdef'[Math.floor(Math.random()*16)])
+            && (color.length == 6) ?  color : arguments.callee(color);
+        })('');
+    }
+    getInfo();
+    var interval = setInterval(function() {
+        getInfo();
+    }, 1000);
+</script></div></header><footer class="post__foot u-cf"><ul class="post__tag u-fl"><li class="post__tag__item"><a class="post__tag__link" href="/tags/0%EF%BD%9E30%E5%A4%A9/">0～30天</a></li></ul></footer></article></main><footer class="foot"><div class="foot-copy">&copy; 2020 CaoZhen</div></footer>
 <script src="/js/scroller.js"></script>
 
 <script src="/js/main.js"></script>
